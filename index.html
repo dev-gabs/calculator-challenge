@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Calculator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="theme1">
+    <header class="wrapper">
+      <h2>calc</h2>
+      <div class="themer">
+        <ul class="themeValue">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+        <p>THEME</p>
+        <div id="switcher" onclick="toggleTheme()">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrapper">
+      <div class="screen">
+        <div id="result"></div>
+      </div>
+
+      <div id="keypad">
+        <button class="key" onclick="keyNumber(7)"><div>7</div></button>
+        <button class="key" onclick="keyNumber(8)"><div>8</div></button>
+        <button class="key" onclick="keyNumber(9)"><div>9</div></button>
+        <button class="key var1" onclick="del()"><div>DEL</div></button>
+        <button class="key" onclick="keyNumber(4)"><div>4</div></button>
+        <button class="key" onclick="keyNumber(5)"><div>5</div></button>
+        <button class="key" onclick="keyNumber(6)"><div>6</div></button>
+        <button class="key" onclick="operator('+')"><div>+</div></button>
+        <button class="key" onclick="keyNumber(1)"><div>1</div></button>
+        <button class="key" onclick="keyNumber(2)"><div>2</div></button>
+        <button class="key" onclick="keyNumber(3)"><div>3</div></button>
+        <button class="key" onclick="operator('-')"><div>-</div></button>
+        <button class="key" onclick="keyNumber('.')"><div>.</div></button>
+        <button class="key" onclick="keyNumber(0)"><div>0</div></button>
+        <button class="key" onclick="operator('/')"><div>/</div></button>
+        <button class="key" onclick="operator('*')"><div>x</div></button>
+        <button class="key var1 reset" onclick="reset()"><div>RESET</div></button>
+        <button class="key equal" onclick="operator('=')"><div>=</div></button>
+      </div>
+    </main>
+
+    button.k
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Gabriel Salvador</a>.
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

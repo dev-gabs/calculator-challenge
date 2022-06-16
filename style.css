@@ -1,0 +1,373 @@
+/* General */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'League Spartan', sans-serif;
+
+  transition: color 300ms, background-color 300ms;
+}
+
+:root {
+  /* Theme 1 variables */
+
+  --firstMainBg: hsl(222, 26%, 31%);
+  --firstKeypadBg: hsl(223, 31%, 20%);
+  --firstScreenBg: hsl(224, 36%, 15%);
+
+  --firstKeyBg: hsl(30, 25%, 89%);
+  --firstKeyShadow: hsl(28, 16%, 65%);
+
+  --firstVar1KeyBg: hsl(225, 21%, 49%);
+  --firstVar1KeyShadow: hsl(224, 28%, 35%);
+
+  --firstContrastKeyBg: hsl(6, 63%, 50%);
+  --firstContrastKeyShadow: hsl(6, 70%, 34%);
+
+  --firstKeyFontColor: hsl(221, 14%, 31%);
+  --firstKeyFontColor2: white;
+
+  /* Theme 2 variables */
+
+  --secondMainBg: hsl(0, 0%, 90%);
+  --secondKeypadBg: hsl(0, 5%, 81%);
+  --secondScreenBg: hsl(0, 0%, 93%);
+
+  --secondKeyBg: hsl(45, 7%, 89%);
+  --secondKeyShadow: hsl(35, 11%, 61%);
+
+  --secondVar1KeyBg: hsl(185, 42%, 37%);
+  --secondVar1KeyShadow: hsl(185, 58%, 25%);
+
+  --secondContrastKeyBg: hsl(25, 98%, 40%);
+  --secondContrastKeyShadow: hsl(25, 99%, 27%);
+
+  --secondKeyFontColor: hsl(60, 10%, 19%);
+  --secondKeyFontColor2: white;
+
+  /* Theme 3 variables */
+
+  --thirdMainBg: hsl(268, 75%, 9%);
+  --thirdKeypadBg: hsl(268, 71%, 12%);
+  --thirdScreenBg: hsl(268, 71%, 12%);
+
+  --thirdKeyBg: hsl(268, 47%, 21%);
+  --thirdKeyShadow: hsl(290, 70%, 36%);
+
+  --thirdVar1KeyBg: hsl(281, 89%, 26%);
+  --thirdVar1KeyShadow: hsl(285, 91%, 52%);
+
+  --thirdContrastKeyBg: hsl(176, 100%, 44%);
+  --thirdContrastKeyShadow: hsl(177, 92%, 70%);
+
+  --thirdKeyFontColor: hsl(52, 100%, 62%);
+  --thirdKeyFontColor2: white;
+  --thirdKeyFontColor3: hsl(198, 20%, 13%);
+
+  font-size: 62.5%;
+}
+
+.wrapper {
+  width: min(32.5rem, 85%);
+  margin-inline: auto;
+}
+
+/* Themes Properties */
+
+.theme1 {
+  --mainBg: var(--firstMainBg);
+  --screenBg: var(--firstScreenBg);
+  --keypadBg: var(--firstKeypadBg);
+
+  --keyBg: var(--firstKeyBg);
+  --keyShadow: var(--firstKeyShadow);
+
+  --var1KeyBg: var(--firstVar1KeyBg);
+  --var1KeyShadow: var(--firstVar1KeyShadow);
+
+  --contrastKeyBg: var(--firstContrastKeyBg);
+  --contrastKeyShadow: var(--firstContrastKeyShadow);
+
+  --keyFontColor: var(--firstKeyFontColor);
+  --keyFontColor2: var(--firstKeyFontColor2);
+}
+
+.theme2 {
+  --mainBg: var(--secondMainBg);
+  --screenBg: var(--secondScreenBg);
+  --keypadBg: var(--secondKeypadBg);
+
+  --keyBg: var(--secondKeyBg);
+  --keyShadow: var(--secondKeyShadow);
+
+  --var1KeyBg: var(--secondVar1KeyBg);
+  --var1KeyShadow: var(--secondVar1KeyShadow);
+
+  --contrastKeyBg: var(--secondContrastKeyBg);
+  --contrastKeyShadow: var(--secondContrastKeyShadow);
+
+  --keyFontColor: var(--secondKeyFontColor);
+  --keyFontColor2: var(--secondKeyFontColor2);
+}
+
+.theme3 {
+  --mainBg: var(--thirdMainBg);
+  --screenBg: var(--thirdScreenBg);
+  --keypadBg: var(--thirdKeypadBg);
+
+  --keyBg: var(--thirdKeyBg);
+  --keyShadow: var(--thirdKeyShadow);
+
+  --var1KeyBg: var(--thirdVar1KeyBg);
+  --var1KeyShadow: var(--thirdVar1KeyShadow);
+
+  --contrastKeyBg: var(--thirdContrastKeyBg);
+  --contrastKeyShadow: var(--thirdContrastKeyShadow);
+
+  --keyFontColor: var(--thirdKeyFontColor);
+  --keyFontColor2: var(--thirdKeyFontColor2);
+}
+
+/* Body Porperties */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--mainBg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Header Properties */
+
+header {
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--keyFontColor2);
+}
+
+.theme2 header,
+.theme2 .screen,
+.theme3 header,
+.theme3 .screen {
+  color: var(--keyFontColor);
+}
+
+header h2 {
+  margin-left: 1rem;
+
+  font-size: 3rem;
+}
+
+/* Themer Properties */
+
+.themer {
+  display: grid;
+  grid-template-areas:
+    'A B'
+    'C D';
+  gap: 0.8rem 2.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.themer ul {
+  width: 100%;
+  padding-inline: 1rem;
+
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+
+  grid-area: B;
+}
+
+.themer p {
+  grid-area: C;
+}
+
+#switcher {
+  width: 7rem;
+  height: 2.5rem;
+
+  padding: 0.5rem;
+
+  background-color: var(--keypadBg);
+  border-radius: 3rem;
+
+  grid-area: D;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#switcher .circle {
+  height: 100%;
+  aspect-ratio: 1/1;
+
+  background-color: var(--contrastKeyBg);
+  border-radius: 50%;
+
+  transition: margin 300ms;
+}
+
+body.theme2 #switcher .circle {
+  margin-left: 2.15rem;
+}
+
+body.theme3 #switcher .circle {
+  margin-left: 75%;
+}
+
+/* Main Properties */
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2.5rem;
+}
+
+/* Screen Properties */
+
+.screen {
+  width: 100%;
+  height: 8.5rem;
+
+  padding-inline: 2.5rem;
+
+  background-color: var(--screenBg);
+  border-radius: 1rem;
+
+  color: var(--keyFontColor2);
+  font-size: 3.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#result {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+
+  overflow-x: hidden;
+}
+
+/* Keypad Properties */
+
+#keypad {
+  width: 100%;
+  height: auto;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  background-color: var(--keypadBg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* Keys Properties */
+
+button.key {
+  flex: 1 1 21%;
+  aspect-ratio: 1/1;
+
+  margin-bottom: 0.4rem;
+  border-radius: 0.5rem;
+  border: 0;
+
+  font-size: 3rem;
+  color: var(--keyFontColor);
+
+  background-color: var(--keyBg);
+  filter: drop-shadow(0 0.4rem 0 var(--keyShadow));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 100ms;
+}
+button.key:hover {
+  filter: brightness(90%) drop-shadow(0 0.4rem 0 var(--keyShadow));
+}
+
+button.var1:hover {
+  filter: brightness(90%) drop-shadow(0 0.4rem 0 var(--var1KeyShadow));
+}
+
+button.equal:hover {
+  filter: brightness(90%) drop-shadow(0 0.4rem 0 var(--contrastKeyShadow));
+}
+
+button.key:active {
+  filter: brightness(70%) drop-shadow(0 0.4rem 0 var(--keyShadow));
+}
+
+button.var1:active {
+  filter: brightness(70%) drop-shadow(0 0.4rem 0 var(--var1KeyShadow));
+}
+
+button.equal:active {
+  filter: brightness(70%) drop-shadow(0 0.4rem 0 var(--contrastKeyShadow));
+}
+
+button > div {
+  margin-top: 0.8rem;
+}
+
+button.reset,
+button.equal {
+  aspect-ratio: 2/1;
+}
+
+button.var1 {
+  background-color: var(--var1KeyBg);
+  filter: drop-shadow(0 0.4rem 0 var(--var1KeyShadow));
+}
+
+button.equal {
+  background-color: var(--contrastKeyBg);
+  filter: drop-shadow(0 0.4rem 0 var(--contrastKeyShadow));
+}
+
+.theme3 button.equal {
+  color: var(--thirdKeyFontColor3);
+}
+
+button.var1,
+button.equal {
+  font-size: 2.2rem;
+  color: var(--keyFontColor2);
+}
+
+/* Attribution Properties */
+
+.attribution {
+  margin-top: auto;
+  margin-bottom: 3rem;
+
+  font-size: 1.4rem;
+}
